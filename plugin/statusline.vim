@@ -3,7 +3,7 @@ scriptencoding utf-8
 "" Status line
 "" via https://github.com/noahfrederick/dots/blob/master/vim/init.vim#L207-L275
 
-let &statusline  = ' %2*%{exists("*ObsessionStatus")?ObsessionStatus(StatuslineProject(), "[".StatuslineProject()."]"):""}'
+let &statusline  = '#%n%2* %{exists("*ObsessionStatus")?ObsessionStatus(StatuslineProject(), "[".StatuslineProject()."]"):""}'
 let &statusline .= '%#StatusLineNC#%{exists("*ObsessionStatus")?ObsessionStatus("", "", StatuslineProject()):StatuslineProject()}'
 let &statusline .= "%*%{empty(expand('%'))?'':expand('%')}"
 let &statusline .= "%#StatusLineNC#%{StatuslineGit()}%* "
