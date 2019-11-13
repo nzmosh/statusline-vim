@@ -18,6 +18,7 @@ let &statusline .= '%{&fileformat!="unix"?" ".&fileformat." ":""}%*'
 let &statusline .= '%{strlen(&filetype)?&filetype." ":""}'
 let &statusline .= '%#Error#%{exists("*neomake#statusline#QflistStatus")?neomake#statusline#QflistStatus().neomake#statusline#LoclistStatus():""}'
 let &statusline .= "%{StatuslineTrailingWhitespace()}%*"
+let &statusline .= "%l/%L "
 
 function! StatuslineGit()
   if !exists('*fugitive#head')
